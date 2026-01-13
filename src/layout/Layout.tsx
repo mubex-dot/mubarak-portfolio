@@ -3,7 +3,7 @@ import Main from "./Main";
 import SideNav from "./SideNav";
 import Content from "./Content";
 
-function Layout() {
+function Layout({ isLoadingComplete }: { isLoadingComplete: boolean }) {
   const drawerWidth = 265;
   const [mobileOpen, setMobileOpen] = useState(false);
   const handleDrawerToggle = () => {
@@ -19,7 +19,7 @@ function Layout() {
 
       <Main
         drawerWidth={drawerWidth}
-        children={<Content />}
+        children={<Content isLoadingComplete={isLoadingComplete} />}
         handleDrawerToggle={handleDrawerToggle}
       />
     </div>

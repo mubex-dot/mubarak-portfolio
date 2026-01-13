@@ -1,9 +1,9 @@
 import Layout from "./layout/Layout";
 
-function App() {
+function App({ isLoadingComplete }: { isLoadingComplete: boolean }) {
   return (
     <>
-      <Layout />
+      <Layout isLoadingComplete={isLoadingComplete} />
     </>
   );
 }

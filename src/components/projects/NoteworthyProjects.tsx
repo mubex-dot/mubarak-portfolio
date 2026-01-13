@@ -19,7 +19,7 @@ const NoteworthyProjects = () => {
                   <a
                     href={project.projectLink}
                     target="_blank"
-                    rel="noreferrer noopener"
+                    rel="noopener noreferrer"
                     className="hover:text-primary transition delay-100 duration-200 ease-in-out"
                   >
                     <ExternalLink />
@@ -30,7 +30,7 @@ const NoteworthyProjects = () => {
                   <a
                     href={project.githubLink}
                     target="_blank"
-                    rel="noreferrer noopener"
+                    rel="noopener noreferrer"
                     className="hover:text-primary transition delay-100 duration-200 ease-in-out"
                   >
                     <Github />

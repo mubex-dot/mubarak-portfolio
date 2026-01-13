@@ -2,7 +2,10 @@ import SectionHeader from "../ui/SectionHeader";
 
 const Skills = () => {
   return (
-    <div className="flex flex-col justify-center items-center min-h-screen py-10">
+    <div
+      id="skills"
+      className="flex flex-col justify-center items-center min-h-screen py-10"
+    >
       <SectionHeader
         sectionNumber={"02"}
         sectionName={"Skills & Technologies"}

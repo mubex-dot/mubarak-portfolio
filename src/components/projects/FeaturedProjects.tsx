@@ -2,9 +2,9 @@ import { ExternalLink } from "lucide-react";
 
 const FeaturedProjects = () => {
   return (
-    <div>
+    <div id="projects">
       {featuredProjects.map((project) => (
-        <div className="w-full my-50" key={project.id}>
+        <div className="w-full " key={project.id}>
           <div
             className={`block md:flex gap-6 ${
               project.id % 2 === 0 ? "flex-row" : "flex-row-reverse"
@@ -36,7 +36,7 @@ const FeaturedProjects = () => {
                 <a
                   href={project.projectLink}
                   target="_blank"
-                  rel="noreferrer noopener"
+                  rel="noopener noreferrer"
                   className="hover:text-primary transition delay-100 duration-200 ease-in-out"
                 >
                   <ExternalLink />

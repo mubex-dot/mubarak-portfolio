@@ -27,23 +27,57 @@ function SideNav({ handleDrawerToggle, mobileOpen }: Props) {
     };
   }, [mobileOpen, handleDrawerToggle]);
 
+  const scrollToSection = (sectionId: string) => {
+    const element = document.querySelector(sectionId);
+    if (!element) return;
+
+    const targetPosition = element.getBoundingClientRect().top + window.scrollY;
+    const startPosition = window.scrollY;
+    const distance = targetPosition - startPosition;
+    const duration = 1500;
+    let start: number | null = null;
+
+    const animation = (currentTime: number) => {
+      if (start === null) start = currentTime;
+      const elapsed = currentTime - start;
+      const progress = Math.min(elapsed / duration, 1);
+
+      const easeInOutCubic =
+        progress < 0.5
+          ? 4 * progress * progress * progress
+          : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+
+      window.scrollTo(0, startPosition + distance * easeInOutCubic);
+
+      if (progress < 1) {
+        requestAnimationFrame(animation);
+      }
+    };
+
+    requestAnimationFrame(animation);
+  };
+
   const navItems = [
     {
-      text: "Dashboard",
-      link: "/dashboard",
+      text: "About",
+      link: "#about",
     },
     {
-      text: "Wrap Management",
-      link: "/wrap-management",
+      text: "Skills",
+      link: "#skills",
     },
     {
-      text: "Environment",
-      link: "/environment",
+      text: "Projects",
+      link: "#projects",
+    },
+    {
+      text: "Contact",
+      link: "#contact",
     },
   ];
 
   const drawer = (
-    <div className="px-4 h-full overflow-auto">
+    <div className="px-4 py-15 h-full overflow-auto">
       <div className="my-12 flex justify-center items-center flex-col">
         <div className="flex items-center gap-2 w-full justify-between">
           <div className="w-full"></div>
@@ -51,29 +85,24 @@ function SideNav({ handleDrawerToggle, mobileOpen }: Props) {
             <ChevronLeft className="text-[#95969D] cursor-pointer" />
           </button>
         </div>
-
-        <div className="flex items-center gap-4 w-full">
-          {/* <img src={sidenavImg} alt="Wrap2Grow icon" /> */}
-          <div>
-            <h3 className="font-bold text-foreground">Wrap2Grow</h3>
-            <p className="text-text-primary">Green Degrade Tracker</p>
-          </div>
-        </div>
       </div>
 
-      <div className="flex flex-col justify-between h-[75%]">
+      <div className="flex flex-col justify-between h-3/4 px-10">
         <ul className="space-y-1">
           {navItems.map((item, index) => {
             return (
               <li key={index} className="py-1">
-                <a href={item.link} className="text-text-primary block w-full">
-                  <div
-                    className="flex items-center gap-2 p-3"
-                    onClick={handleDrawerToggle}
-                  >
-                    <span className="text-sm md:text-base font-lexend">
-                      {item.text}
-                    </span>
+                <a
+                  href={item.link}
+                  className="block w-full"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrollToSection(item.link);
+                    handleDrawerToggle();
+                  }}
+                >
+                  <div className="flex items-center gap-2 p-3">
+                    <span>{item.text}</span>
                   </div>
                 </a>
               </li>

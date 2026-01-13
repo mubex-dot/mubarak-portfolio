@@ -3,7 +3,10 @@ import MubarakImage from "@/assets/images/mubarak.jpg";
 
 const About = () => {
   return (
-    <div className="flex flex-col justify-center items-center min-h-screen">
+    <div
+      id="about"
+      className="flex flex-col justify-center items-center min-h-screen"
+    >
       <SectionHeader sectionNumber={"01"} sectionName={"About"} />
       <div className="flex flex-col md:flex-row justify-between items-center w-full">
         <div className="w-full md:w-3/6 flex flex-col gap-6">

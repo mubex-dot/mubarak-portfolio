@@ -6,6 +6,7 @@ interface TypingAnimationProps {
   delayBetweenPhrases?: number;
   cursorClassName?: string;
   textClassName?: string;
+  shouldStart?: boolean;
 }
 
 export default function TypingAnimation({
@@ -14,12 +15,15 @@ export default function TypingAnimation({
   delayBetweenPhrases = 2000,
   cursorClassName = "animate-pulse",
   textClassName = "text-4xl md:text-5xl",
+  shouldStart = true,
 }: TypingAnimationProps) {
   const [displayText, setDisplayText] = useState("");
   const [phraseIndex, setPhraseIndex] = useState(0);
   const [isTyping, setIsTyping] = useState(true);
 
   useEffect(() => {
+    if (!shouldStart) return;
+
     const currentPhrase = phrases[phraseIndex];
     let timeout: ReturnType<typeof setTimeout>;
 
@@ -51,7 +55,15 @@ export default function TypingAnimation({
     }
 
     return () => clearTimeout(timeout);
-  }, [displayText, phraseIndex, isTyping, speed, delayBetweenPhrases, phrases]);
+  }, [
+    displayText,
+    phraseIndex,
+    isTyping,
+    speed,
+    delayBetweenPhrases,
+    phrases,
+    shouldStart,
+  ]);
 
   return (
     <span className={textClassName}>
