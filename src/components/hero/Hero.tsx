@@ -1,5 +1,6 @@
 import { ArrowDownIcon, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "../ui/button";
+import TypingAnimation from "../ui/TypingAnimation";
 
 const Hero = () => {
   const heroIcons = [
@@ -8,12 +9,19 @@ const Hero = () => {
     { id: 3, icon: <Mail />, iconLink: "#" },
   ];
 
+  const typingPhrases = ["Mubarak", "a Frontend Developer", "a Web Enthusiast"];
+
   return (
     <div className="flex flex-col justify-center items-center min-h-screen text-center">
       <div className="flex flex-col gap-2">
-        <p className="font-secondary text-primary">Hi, My name is</p>
+        <p className="font-secondary text-primary">Hi, I am</p>
         <h1 className="text-[#FCFBF8] text-5xl md:text-6xl font-bold">
-          Mubarak
+          <TypingAnimation
+            phrases={typingPhrases}
+            speed={80}
+            delayBetweenPhrases={2000}
+            textClassName="text-5xl md:text-6xl font-bold"
+          />
         </h1>
         <h2 className="text-4xl md:text-5xl">I build things for the web.</h2>
         <p>
