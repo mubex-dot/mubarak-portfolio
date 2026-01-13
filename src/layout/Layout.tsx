@@ -13,7 +13,6 @@ function Layout() {
   return (
     <div className="flex">
       <SideNav
-        // drawerWidth={drawerWidth}
         handleDrawerToggle={handleDrawerToggle}
         mobileOpen={mobileOpen}
       />

@@ -1,5 +1,5 @@
-import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { MenuIcon } from "lucide-react";
 
 type Props = {
   handleDrawerToggle: () => void;
@@ -28,7 +28,7 @@ function Header({ handleDrawerToggle }: Props) {
             size="icon"
             onClick={handleDrawerToggle}
           >
-            <Menu />
+            <MenuIcon />
           </Button>
           <div className="hidden sm:flex gap-8 font-secondary">
             {headerNavItems.map((link) => (

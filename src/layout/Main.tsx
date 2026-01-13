@@ -18,7 +18,7 @@ function Main({ drawerWidth, children, handleDrawerToggle }: Props) {
         <Header handleDrawerToggle={handleDrawerToggle} />
       </div>
 
-      <div className="py-30 px-5 flex-1">{children}</div>
+      <div className="px-5 flex-1">{children}</div>
 
       <Footer />
     </main>

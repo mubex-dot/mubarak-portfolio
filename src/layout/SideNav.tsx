@@ -1,11 +1,5 @@
+import { ChevronLeft } from "lucide-react";
 import { useEffect, useRef } from "react";
-import {
-  LayoutDashboard,
-  ChevronLeft,
-  FileText,
-  Mail,
-  Settings,
-} from "lucide-react";
 
 type Props = {
   handleDrawerToggle: () => void;
@@ -36,33 +30,15 @@ function SideNav({ handleDrawerToggle, mobileOpen }: Props) {
   const navItems = [
     {
       text: "Dashboard",
-      icon: LayoutDashboard,
       link: "/dashboard",
     },
     {
       text: "Wrap Management",
-      icon: Mail,
       link: "/wrap-management",
     },
     {
       text: "Environment",
-      icon: FileText,
       link: "/environment",
-    },
-    // {
-    //   text: "Analytics",
-    //   icon: BarChart3,
-    //   link: "/analytics",
-    // },
-    // {
-    //   text: "Activities",
-    //   icon: Settings,
-    //   link: "/activities",
-    // },
-    {
-      text: "Settings",
-      icon: Settings,
-      link: "/settings",
     },
   ];
 
@@ -88,26 +64,13 @@ function SideNav({ handleDrawerToggle, mobileOpen }: Props) {
       <div className="flex flex-col justify-between h-[75%]">
         <ul className="space-y-1">
           {navItems.map((item, index) => {
-            // const isActive = location.pathname.includes(item.link);
-
             return (
               <li key={index} className="py-1">
-                <a
-                  href={item.link}
-                  // className={({ isActive }) =>
-                  //   isActive
-                  //     ? "text-primary-foreground block w-full bg-primary rounded-md"
-                  //     : "text-text-primary block w-full"
-                  // }
-                  className="text-text-primary block w-full"
-
-                  // onClick={() => navigate(`${item.link}`)}
-                >
+                <a href={item.link} className="text-text-primary block w-full">
                   <div
                     className="flex items-center gap-2 p-3"
                     onClick={handleDrawerToggle}
                   >
-                    <item.icon className="text-[#6F6F67]" size={20} />
                     <span className="text-sm md:text-base font-lexend">
                       {item.text}
                     </span>
@@ -133,10 +96,7 @@ function SideNav({ handleDrawerToggle, mobileOpen }: Props) {
         aria-hidden="true"
       />
 
-      <nav
-        // style={{ "--drawer-width": `${drawerWidth}px` } as React.CSSProperties}
-        className="sm:w-(--drawer-width) sm:shrink-0"
-      >
+      <nav className="sm:w-(--drawer-width) sm:shrink-0">
         {/* Mobile drawer */}
         <div
           ref={sideNavRef}
@@ -151,11 +111,6 @@ function SideNav({ handleDrawerToggle, mobileOpen }: Props) {
         >
           <div className="h-full overflow-y-auto">{drawer}</div>
         </div>
-
-        {/* Desktop permanent drawer */}
-        {/* <div className="hidden fixed inset-y-0 left-0 z-40 w-(--drawer-width) bg-bg-primary border-none overflow-y-auto">
-          {drawer}
-        </div> */}
       </nav>
     </>
   );
