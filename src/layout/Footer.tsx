@@ -10,7 +10,7 @@ function Footer() {
   ];
 
   return (
-    <div className="px-2.5 py-6 text-center border-t border-[#16213C] flex justify-center items-center">
+    <div className="px-2.5 py-10  text-center border-t border-[#16213C] flex justify-center items-center">
       <div className="w-11/12 ">
         <div className="flex flex-col gap-3">
           <div className="flex justify-center items-center gap-8">

@@ -3,7 +3,7 @@ import MubarakImage from "@/assets/images/mubarak.jpg";
 
 const About = () => {
   return (
-    <div className="flex flex-col justify-center items-center min-h-screen py-10">
+    <div className="flex flex-col justify-center items-center min-h-screen">
       <SectionHeader sectionNumber={"01"} sectionName={"About"} />
       <div className="flex flex-col md:flex-row justify-between items-center w-full">
         <div className="w-full md:w-3/6 flex flex-col gap-6">
@@ -18,7 +18,8 @@ const About = () => {
             I started my journey as a developer in 2021 when I decided to try
             creating a website. It turns out hacking together HTML & CSS taught
             me a lot about web development! Fast-forward to today, and I've had
-            the privilege of working at a startup, and also a tech corporation.
+            the privilege of working at a startup, a tech corporation, and small
+            businesses as well.
           </p>
           <p>
             My main focus these days is building accessible, inclusive products
@@ -28,10 +29,7 @@ const About = () => {
           </p>
         </div>
         <div className="w-full md:w-2/6 mt-10 md:mt-0 flex items-center justify-center">
-          <div
-            className="relative w-full h-full rounded-xl flex items-center justify-center bg-[#0b1326]
-            before:absolute before:inset-0 before:rounded-xl before:border before:border-primary/80 before:shadow-[0_0_25px_rgba(0,255,255,1)]"
-          >
+          <div className=" w-full h-full rounded-xl flex items-center justify-center bg-[#0b1326] border border-primary/80 shadow-[0_0_25px_rgba(0,255,255,0.9)]">
             <img
               src={MubarakImage}
               alt="Mubarak's image"

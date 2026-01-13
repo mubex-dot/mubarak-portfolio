@@ -14,13 +14,15 @@ function Main({ drawerWidth, children, handleDrawerToggle }: Props) {
       style={{ "--drawer-width": `${drawerWidth}px` } as React.CSSProperties}
       className="sm:w-[calc(100%-var(--drawer-width))] grow min-h-screen flex flex-col w-11/12 "
     >
-      <div className="fixed w-full flex-1 bg-background">
+      <header className="sticky top-0 z-50 bg-background">
         <Header handleDrawerToggle={handleDrawerToggle} />
-      </div>
+      </header>
 
       <div className="px-5 flex-1">{children}</div>
 
-      <Footer />
+      <footer>
+        <Footer />
+      </footer>
     </main>
   );
 }

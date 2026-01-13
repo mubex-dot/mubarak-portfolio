@@ -31,7 +31,7 @@ const Hero = () => {
         <Button variant="outline">Get In Touch</Button>
       </div>
       <div className="flex justify-center items-center">
-        <ArrowDownIcon className="animate-bounce m-7" />
+        <ArrowDownIcon className="animate-bounce m-7 cursor-pointer" />
       </div>
       <div className="flex justify-center items-center gap-8">
         {heroIcons.map((icon) => (

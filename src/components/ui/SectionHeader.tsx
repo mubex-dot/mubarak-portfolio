@@ -8,7 +8,7 @@ const SectionHeader = ({ sectionNumber, sectionName }: SectionHeaderProps) => {
     <div className="flex w-full items-center gap-6 my-10 sm:my-15">
       <div className="flex gap-6 items-center ">
         <p className="font-secondary text-primary text-lg">{sectionNumber}.</p>
-        <h2 className="text-[#FCFBF8] text-4xl md:text-5xl shrink-0 whitespace-nowrap">
+        <h2 className="text-[#FCFBF8] text-2xl sm:text-3xl md:text-4xl lg:text-5xl shrink-0 whitespace-nowrap">
           {sectionName}
         </h2>
       </div>
