@@ -5,7 +5,7 @@ import CVFile from "@/assets/documents/Mubarak_CV.pdf";
 
 const Contact = () => {
   const handleEmailClick = () => {
-    window.location.href = "mailto:mubee2004@gmail.com";
+    window.location.href = "mailto:mubex.dot@gmail.com";
   };
 
   const handleDownloadCV = () => {
