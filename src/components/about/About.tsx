@@ -11,7 +11,7 @@ const About = () => {
       <div className="flex flex-col md:flex-row justify-between items-center w-full">
         <div className="w-full md:w-3/6 flex flex-col gap-6">
           <p>
-            Hello! I'm Mubarak, a frontend developer based in Nigeria. I
+            Hello! I'm Mubarak, a software developer based in Nigeria. I
             specialize in building digital experiences that live at the
             intersection of design and engineering. My goal is to develop
             pixel-perfect, high-performance products that are as functional as

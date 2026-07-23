@@ -78,7 +78,7 @@ const featuredProjects = [
   },
   {
     id: 2,
-    projectName: "iT Central website & CMS",
+    projectName: "iT Central Website & CMS",
     projectDesc: "A software development and tech talent incubator company",
     projectStack: [
       { id: 1, stackName: "React" },

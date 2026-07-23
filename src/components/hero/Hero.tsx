@@ -64,7 +64,7 @@ const Hero = ({ isLoadingComplete }: { isLoadingComplete: boolean }) => {
         </h1>
         <h2 className="text-4xl md:text-5xl">I build things for the web.</h2>
         <p>
-          I'm a frontend developer specializing in building exceptional digital
+          I'm a software developer specializing in building exceptional digital
           experiences.
         </p>
         <p>

@@ -64,7 +64,7 @@ const NoteworthyProjects = () => {
 const noteworthyProjects = [
   {
     id: 1,
-    projectName: "Simplifi Africa",
+    projectName: "Simplifi Africa (Backend)",
     projectDesc:
       "Personal finance companion designed to help take control of spending",
     projectStack: [
