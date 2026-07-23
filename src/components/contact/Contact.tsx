@@ -1,7 +1,7 @@
 import { Mail } from "lucide-react";
 import { Button } from "../ui/button";
 import SectionHeader from "../ui/SectionHeader";
-import CVFile from "@/assets/documents/Mubarak_CV.pdf";
+import CVFile from "@/assets/documents/Mubarak.pdf";
 
 const Contact = () => {
   const handleEmailClick = () => {
@@ -11,7 +11,7 @@ const Contact = () => {
   const handleDownloadCV = () => {
     const link = document.createElement("a");
     link.href = CVFile;
-    link.download = "Mubarak_CV.pdf";
+    link.download = "Mubarak";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

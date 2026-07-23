@@ -65,7 +65,7 @@ const FeaturedProjects = () => {
 const featuredProjects = [
   {
     id: 1,
-    projectName: "Schoola (Landing Page & LMS.)",
+    projectName: "Schoola (Landing Page, SRC & LMS.)",
     projectDesc:
       "A gamified learning solution that drives engagement for K12 schools elearning and uses AI for analytics and agnostic content generation increasing performance of teachers and learners.",
     projectStack: [
@@ -74,10 +74,22 @@ const featuredProjects = [
       { id: 3, stackName: "Material UI" },
       { id: 4, stackName: "Redux Toolkit" },
     ],
-    projectLink: "https://www.schoola.app",
+    projectLink: "https://www.schoola.app/",
   },
   {
     id: 2,
+    projectName: "iT Central website & CMS",
+    projectDesc: "A software development and tech talent incubator company",
+    projectStack: [
+      { id: 1, stackName: "React" },
+      { id: 2, stackName: "TypeScript" },
+      { id: 3, stackName: "Material UI" },
+      { id: 4, stackName: "Redux Toolkit" },
+    ],
+    projectLink: "https://itcentral.ng/",
+  },
+  {
+    id: 3,
     projectName: "ConnectED (Frontend & Backend)",
     projectDesc:
       "An SMS-based radio that will connect Organizations with the Underserved.",

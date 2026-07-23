@@ -64,23 +64,36 @@ const NoteworthyProjects = () => {
 const noteworthyProjects = [
   {
     id: 1,
-    projectName: "AgroTrade",
+    projectName: "Simplifi Africa",
     projectDesc:
-      "P2P Marketplace for Agricultural Trade and Byproduct Exchange",
+      "Personal finance companion designed to help take control of spending",
     projectStack: [
-      { id: 1, stackName: "React" },
-      { id: 2, stackName: "TypeScript" },
-      { id: 3, stackName: "Tailwind CSS" },
-      { id: 4, stackName: "Redux Toolkit" },
+      { id: 1, stackName: "Python flask" },
+      { id: 2, stackName: "PostgreSQL" },
+      { id: 3, stackName: "Redis" },
+      // { id: 4, stackName: "Redux Toolkit" },
     ],
-    projectLink: "https://web-agrotrade.onrender.com",
+    // projectLink: "https://simplifi.africa/",
     // githubLink: "https://github.com/Agrotrade-ng/web-agrotrade",
   },
+  // {
+  //   id: 6,
+  //   projectName: "AgroTrade",
+  //   projectDesc:
+  //     "P2P Marketplace for Agricultural Trade and Byproduct Exchange",
+  //   projectStack: [
+  //     { id: 1, stackName: "React" },
+  //     { id: 2, stackName: "TypeScript" },
+  //     { id: 3, stackName: "Tailwind CSS" },
+  //     { id: 4, stackName: "Redux Toolkit" },
+  //   ],
+  //   projectLink: "https://web-agrotrade.onrender.com",
+  //   // githubLink: "https://github.com/Agrotrade-ng/web-agrotrade",
+  // },
   {
     id: 2,
-    projectName: "Wrap2Grow (Frontend & Backend)",
-    projectDesc:
-      "A smart application providing farmers with real-time data on the degradation timelines of waste-derived agricultural wraps.",
+    projectName: "Nigerian Air Force College of Nursing Sciences Portal",
+    projectDesc: "A portal for the NAFCONS",
     projectStack: [
       { id: 1, stackName: "React" },
       { id: 2, stackName: "TypeScript" },
@@ -89,9 +102,40 @@ const noteworthyProjects = [
       { id: 5, stackName: "Python Flask" },
       { id: 7, stackName: "PostgreSQL" },
     ],
-    projectLink: "https://wrap2grow-frontend.onrender.com",
-    githubLink: "https://github.com/mubex-dot/wrap2grow-frontend",
+    // projectLink: "https://wrap2grow-frontend.onrender.com",
+    // githubLink: "https://github.com/mubex-dot/wrap2grow-frontend",
   },
+  {
+    id: 7,
+    projectName: "Aeromedicals",
+    projectDesc:
+      "Official aviation medical assessment and certification for aircrew and applicants, delivered with excellence, integrity and care",
+    projectStack: [
+      { id: 1, stackName: "React" },
+      { id: 2, stackName: "TypeScript" },
+      { id: 3, stackName: "Tailwind CSS" },
+      { id: 5, stackName: "Python Flask" },
+      { id: 7, stackName: "PostgreSQL" },
+    ],
+    // projectLink: "https://wrap2grow-frontend.onrender.com",
+    // githubLink: "https://github.com/mubex-dot/wrap2grow-frontend",
+  },
+  // {
+  //   id: 5,
+  //   projectName: "Wrap2Grow (Frontend & Backend)",
+  //   projectDesc:
+  //     "A smart application providing farmers with real-time data on the degradation timelines of waste-derived agricultural wraps.",
+  //   projectStack: [
+  //     { id: 1, stackName: "React" },
+  //     { id: 2, stackName: "TypeScript" },
+  //     { id: 3, stackName: "Tailwind CSS" },
+  //     { id: 4, stackName: "Redux Toolkit" },
+  //     { id: 5, stackName: "Python Flask" },
+  //     { id: 7, stackName: "PostgreSQL" },
+  //   ],
+  //   projectLink: "https://wrap2grow-frontend.onrender.com",
+  //   githubLink: "https://github.com/mubex-dot/wrap2grow-frontend",
+  // },
   {
     id: 3,
     projectName: "City Explorer",
